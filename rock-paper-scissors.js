@@ -53,7 +53,7 @@ function playGame(rounds) {
         
 
         console.log(`Round ${i + 1} of ${rounds}`);
-        playerSelection = prompt('Enter your choice.');
+        playerSelection = prompt('Rock, paper, scissors, shoot!');
         computerSelection = getComputerChoice();
         const gameResult = playRound(playerSelection, computerSelection);
 
