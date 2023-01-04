@@ -41,6 +41,8 @@ function playRound(playerSelection, computerSelection) {
         } else if (computerChoice == 'scissors') {
             return 'tie';
         }
+    } else {
+        return 'invalid';
     }
 }
 
@@ -49,25 +51,36 @@ function playGame(rounds) {
     let playerScore = 0;
     let computerScore = 0;
 
-    for (let i = 0; i < rounds; i++) {
+    let i = 0;
+    while (i < rounds) {
         
-
         console.log(`Round ${i + 1} of ${rounds}`);
         playerSelection = prompt('Rock, paper, scissors, shoot!');
         computerSelection = getComputerChoice();
         const gameResult = playRound(playerSelection, computerSelection);
+        let increment = false;
 
         if (gameResult == 'tie') {
             console.log('Tie!');
         } else if (gameResult == 'win') {
             playerScore = playerScore + 1;
+            increment = true;
             console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
         } else if (gameResult == 'loss') {
             computerScore = computerScore + 1;
+            increment = true;
             console.log(`You lose! ${computerSelection} beats ${playerSelection}.`);
+        } else {
+            console.log('Invalid entry! Try again.');
         }
 
-        if (i < rounds - 1) {
+        console.log(increment);
+
+        if (increment == true) {
+            i++;
+        }
+
+        if (i < rounds) {
             console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
         }
     }
