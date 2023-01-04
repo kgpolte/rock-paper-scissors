@@ -74,8 +74,6 @@ function playGame(rounds) {
             console.log('Invalid entry! Try again.');
         }
 
-        console.log(increment);
-
         if (increment == true) {
             i++;
         }
