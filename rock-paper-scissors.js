@@ -46,13 +46,12 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function playGame(rounds) {
+function playGame(maxPoints) {
     
     let playerScore = 0;
     let computerScore = 0;
 
-    let i = 0;
-    while (i < rounds) {
+    while (playerScore < maxPoints && computerScore < maxPoints) {
         
         console.log(`Round ${i + 1} of ${rounds}`);
         playerSelection = prompt('Rock, paper, scissors, shoot!');
