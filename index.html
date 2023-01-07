@@ -7,9 +7,42 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <button class="choice-button" id="rock">Rock</button>
-    <button class="choice-button" id="paper">Paper</button>
-    <button class="choice-button" id="scissors">Scissors</button>
+
+    <div id="header">
+        <h1 class="top-header">Rock, Paper, Scissors</h1>
+    </div>
+
+    <div id="game">
+
+        <h2>Choose your fighter!</h2>
+        <div id="choice-buttons">
+            <button class="choice-button" id="rock">Rock</button>
+            <button class="choice-button" id="paper">Paper</button>
+            <button class="choice-button" id="scissors">Scissors</button>
+        </div>
+
+        <div id="scoreboard">
+            <h2 id="round-header"></h2>
+            <p id="choices"></p>
+            <p id="results"></p>
+        </div>
+
+        <h2>Score:</h2>
+        <div id="score">
+            <div class="card" id="human-score">
+                <img src="#" alt="Human logo">
+                <p class="text"></p>
+            </div>
+            <div class="card" id="computer-score">
+                <img src="#" alt="Computer logo">
+                <p class="text"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>Copright © kgpolte 2023</p>
+    </div>
 
     <script src="./rock-paper-scissors.js"></script>
 </body>
