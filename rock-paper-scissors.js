@@ -47,56 +47,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function playGame(maxPoints) {
-
-    const choiceButtons = document.querySelectorAll('.choice-button');
-
-    for (button of choiceButtons) {
-        button.addEventListener('click', e => console.dir(e.target.id));
-    }
     
-    let playerScore = 0;
-    let computerScore = 0;
-
-    let i = 0;
-    while (playerScore < maxPoints && computerScore < maxPoints) {
-        
-        console.log(`Round ${i + 1}`);
-        console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
-
-        playerSelection = prompt('Rock, paper, scissors, shoot!');
-        computerSelection = getComputerChoice();
-        const gameResult = playRound(playerSelection, computerSelection);
-        let increment = false;
-
-        if (gameResult == 'tie') {
-            console.log('Tie!');
-        } else if (gameResult == 'win') {
-            playerScore = playerScore + 1;
-            increment = true;
-            console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
-        } else if (gameResult == 'loss') {
-            computerScore = computerScore + 1;
-            increment = true;
-            console.log(`You lose! ${computerSelection} beats ${playerSelection}.`);
-        } else {
-            console.log('Invalid entry! Try again.');
-        }
-
-        if (increment == true) {
-            i++;
-        }
-    }
-    
-    console.log('Final Score:'.toUpperCase());
-    console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
-
-    if (playerScore > computerScore) {
-        console.log('Player wins!');
-    } else if (computerScore > playerScore) {
-        console.log('Computer wins!');
-    } else {
-        console.log('Tie game!');
-    }
 }
 
 playGame(5);
