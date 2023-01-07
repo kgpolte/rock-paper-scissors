@@ -47,6 +47,12 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function playGame(maxPoints) {
+
+    const choiceButtons = document.querySelectorAll('.choice-button');
+
+    for (button of choiceButtons) {
+        button.addEventListener('click', e => console.dir(e.target.id));
+    }
     
     let playerScore = 0;
     let computerScore = 0;
@@ -56,7 +62,7 @@ function playGame(maxPoints) {
         
         console.log(`Round ${i + 1}`);
         console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
-        
+
         playerSelection = prompt('Rock, paper, scissors, shoot!');
         computerSelection = getComputerChoice();
         const gameResult = playRound(playerSelection, computerSelection);
