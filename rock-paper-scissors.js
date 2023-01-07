@@ -8,23 +8,6 @@ function setupGame() {
     updateDisplay();
 }
 
-function getResults(playerChoice, computerChoice) {
-
-    if (playerChoice == 'rock') {
-        if (computerChoice == 'rock') return 'tie';
-        else if (computerChoice == 'paper') return 'loss';
-        else if (computerChoice == 'scissors') return 'win';
-    } else if (playerChoice == 'paper') {
-        if (computerChoice == 'rock') return 'win';
-        else if (computerChoice == 'paper') return 'tie';
-        else if (computerChoice == 'scissors') return 'loss';
-    } else if (playerChoice == 'scissors') {
-        if (computerChoice == 'rock') return 'loss';
-        else if (computerChoice == 'paper') return 'win';
-        else if (computerChoice == 'scissors') return 'tie';
-    } else return 'invalid player choice';
-}
-
 function restart() {
     location.reload();
 }
@@ -57,6 +40,25 @@ function updateDisplay() {
     }
 
     roundHeader.textContent = `Round ${roundNumber}`;
+}
+
+// Get the result for a single round as a string:
+// Returns either 'win', 'loss', or 'tie'
+function getResults(playerChoice, computerChoice) {
+
+    if (playerChoice == 'rock') {
+        if (computerChoice == 'rock') return 'tie';
+        else if (computerChoice == 'paper') return 'loss';
+        else if (computerChoice == 'scissors') return 'win';
+    } else if (playerChoice == 'paper') {
+        if (computerChoice == 'rock') return 'win';
+        else if (computerChoice == 'paper') return 'tie';
+        else if (computerChoice == 'scissors') return 'loss';
+    } else if (playerChoice == 'scissors') {
+        if (computerChoice == 'rock') return 'loss';
+        else if (computerChoice == 'paper') return 'win';
+        else if (computerChoice == 'scissors') return 'tie';
+    }
 }
 
 function playRound(playerChoice) {
