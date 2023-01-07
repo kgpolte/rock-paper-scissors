@@ -51,9 +51,12 @@ function playGame(maxPoints) {
     let playerScore = 0;
     let computerScore = 0;
 
+    let i = 0;
     while (playerScore < maxPoints && computerScore < maxPoints) {
         
-        console.log(`Round ${i + 1} of ${rounds}`);
+        console.log(`Round ${i + 1}`);
+        console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
+        
         playerSelection = prompt('Rock, paper, scissors, shoot!');
         computerSelection = getComputerChoice();
         const gameResult = playRound(playerSelection, computerSelection);
@@ -75,10 +78,6 @@ function playGame(maxPoints) {
 
         if (increment == true) {
             i++;
-        }
-
-        if (i < rounds) {
-            console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
         }
     }
     
