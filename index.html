@@ -14,34 +14,28 @@
 
     <div id="game">
 
+        <h2 id="round-header">Round: 1</h2>
         <div id="scoreboard">
-
-            <h2 id="round-header"></h2>
             <h2>Score:</h2>
+            <div class="score">
+                <h3>Player:</h3>
+                <p class="num player"></p>
+            </div>
 
-            <div id="score">
-                <div class="card" id="human-score">
-                    <img src="#" alt="Human logo">
-                    <p class="text"></p>
-                </div>
-                <div class="card" id="computer-score">
-                    <img src="#" alt="Computer logo">
-                    <p class="text"></p>
-                </div>
+            <div class="score">
+                <h3>Computer:</h3>
+                <p class="num computer"></p>
             </div>
         </div>
 
-        <h2>Choose your fighter!</h2>
+        <h2 class="flavor">Choose your fighter!</h2>
         <div id="choice-buttons">
-            <button class="choice-button" id="rock">Rock</button>
-            <button class="choice-button" id="paper">Paper</button>
-            <button class="choice-button" id="scissors">Scissors</button>
+            <button class="choice" id="rock">Rock</button>
+            <button class="choice" id="paper">Paper</button>
+            <button class="choice" id="scissors">Scissors</button>
         </div>
 
-        <div id="commentary">
-            <p id="choices"></p>
-            <p id="results"></p>
-        </div>
+        <p id="commentary"></p>
     </div>
 
     <div id="footer">
