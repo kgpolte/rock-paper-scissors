@@ -14,7 +14,11 @@ function restart() {
 
 function endGame() {
 
-    roundHeader.textContent = "Game Over!";
+    if (playerScore > computerScore) {
+        roundHeader.textContent = "Game Over! Player wins!";
+    } else {
+        roundHeader.textContent = "Game Over! Computer Wins!";
+    }
     scoreHeader.textContent = "Final Score:";
 
     for (button of choiceButtons) {
